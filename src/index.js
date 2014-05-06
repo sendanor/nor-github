@@ -9,8 +9,8 @@ var ref = require('nor-ref');
 /** Create an issue
  * See https://developer.github.com/v3/issues/#create-an-issue
  * @param opts.auth_token {string} Required. The authorization token
- * @param opts.user_agent {string} Required. The user agent header. Use your GitHub username or application name.
  * @param opts.repository {string} Required. The repository where to create the issue, including the owner (like `sendanor/foo`)
+ * @param opts.user_agent {string} The user agent header. Use your GitHub username or application name. Defaults as `opts.repository`.
  * @param opts.title {string} Required. The title of the issue.
  * @param opts.body {string} The body of the issue.
  * @param opts.milestone {number} The milestone to associate this issue.
@@ -22,8 +22,13 @@ mod.create_issue = function(opts) {
 
 	// Check parameters
 	debug.assert(opts.repository).is('string');
-	debug.assert(opts.auth_token).ignore(undefined).is('string');
+	debug.assert(opts.auth_token).is('string');
+
 	debug.assert(opts.user_agent).ignore(undefined).is('string');
+	if(opts.user_agent === undefined) {
+		opts.user_agent = opts.repository;
+	}
+
 	debug.assert(opts.title).is('string');
 	debug.assert(opts.body).ignore(undefined).is('string');
 	debug.assert(opts.milestone).ignore(undefined).is('number');
