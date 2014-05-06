@@ -13,6 +13,7 @@ var ref = require('nor-ref');
  * @param opts.user_agent {string} The user agent header. Use your GitHub username or application name. Defaults as `opts.repository`.
  * @param opts.title {string} Required. The title of the issue.
  * @param opts.body {string} The body of the issue.
+ * @param opts.assignee {string} The assignee
  * @param opts.milestone {number} The milestone to associate this issue.
  * @param opts.labels {array of strings} Labels for the issue.
  */
@@ -31,6 +32,7 @@ mod.create_issue = function(opts) {
 
 	debug.assert(opts.title).is('string');
 	debug.assert(opts.body).ignore(undefined).is('string');
+	debug.assert(opts.assignee).ignore(undefined).is('string');
 	debug.assert(opts.milestone).ignore(undefined).is('number');
 	debug.assert(opts.labels).ignore(undefined).is('array');
 

@@ -7,7 +7,7 @@ Create an issue
 ---------------
 
 ```javascript
-var github = require('./index.js');
+var github = require('nor-github');
 
 github.create_issue({
 	'auth_token': 'foobarsecret',
