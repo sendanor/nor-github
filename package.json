@@ -1,0 +1,30 @@
+{
+  "name": "nor-github",
+  "version": "0.1.0",
+  "description": "Github API library for Node.js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sendanor/nor-github.git"
+  },
+  "keywords": [
+    "github",
+    "issues"
+  ],
+  "author": "Jaakko-Heikki Heusala <jheusala@iki.fi>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sendanor/nor-github/issues"
+  },
+  "homepage": "https://github.com/sendanor/nor-github",
+  "dependencies": {
+    "nor-debug" : ">= 0.1.32 < 0.2.0",
+    "nor-is"    : ">= 0.1.11 < 0.2.0",
+    "nor-rest"  : ">= 0.1.11 < 0.2.0",
+    "nor-ref"   : ">= 0.1.0  < 0.2.0",
+    "q"         : ">= 1.0.1  < 1.1.0"
+  }
+}
