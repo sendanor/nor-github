@@ -1,6 +1,6 @@
 {
   "name": "nor-github",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Github API library for Node.js",
   "main": "src/index.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "nor-debug" : ">= 0.1.42 < 0.2.0",
     "nor-is"    : ">= 0.1.14 < 0.2.0",
     "nor-rest"  : ">= 0.1.15 < 0.2.0",
-    "nor-ref"   : ">= 0.1.0  < 0.2.0",
+    "nor-ref"   : ">= 0.1.1  < 0.2.0",
     "q"         : ">= 1.0.1  < 1.1.0"
   }
 }
