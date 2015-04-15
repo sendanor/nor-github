@@ -21,3 +21,8 @@ github.create_issue({
 	util.error('Error: ' +err);
 }).done();
 ```
+
+Commercial Support
+------------------
+
+You can buy commercial support from [Sendanor](http://sendanor.com/software).
